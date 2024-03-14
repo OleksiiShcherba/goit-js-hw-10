@@ -5,7 +5,7 @@ body {
     margin-top: 36px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     max-width: 360px;
 }
@@ -33,24 +33,43 @@ button {
     background-color: #cfcfcf;
 }
 
-#datetime-picker{
+#datetime-picker {
     border: 1px solid #808080;
     border-radius: 4px;
     width: 272px;
     height: 40px;
     background-color: #fff;
 
-    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .timer {
     display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 24px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .timer .field .value {
     font-weight: 400;
     font-size: 40px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.timer .field .label {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
     color: #2e2f42;
 }
