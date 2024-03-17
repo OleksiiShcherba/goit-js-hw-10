@@ -11,6 +11,7 @@ const hours_element = document.querySelector('span[data-hours]');
 const minutes_element = document.querySelector('span[data-minutes]');
 const seconds_element = document.querySelector('span[data-seconds]');
 const start_batton = document.querySelector('button[data-start]');
+const input_element = document.querySelector('#datetime-picker');
 
 const on_close_action = selectedDates => {
   const selected_date_for_check = selectedDates[0];
@@ -21,6 +22,7 @@ const on_close_action = selectedDates => {
       position: 'topRight',
       color: '#ef4040',
     });
+
     start_batton.disabled = true;
   } else {
     start_batton.disabled = false;
@@ -30,6 +32,7 @@ const on_close_action = selectedDates => {
 };
 
 const on_start_action = event => {
+  input_element.disabled = true;
   start_batton.disabled = true;
 
   if (selected_date.getTime() < Date.now()) {
@@ -44,6 +47,7 @@ const on_start_action = event => {
 
       if (seconds_left <= 0) {
         clearInterval(interval_id);
+        input_element.disabled = false;
         start_batton.disabled = false;
       } else {
         const { days, hours, minutes, seconds } = convertMs(seconds_left);
@@ -88,6 +92,6 @@ function addLeadingZero(value) {
   return String(value).padStart(2, '0');
 }
 
-flatpickr('#datetime-picker', options);
+flatpickr(input_element, options);
 
 start_batton.addEventListener('click', on_start_action);
