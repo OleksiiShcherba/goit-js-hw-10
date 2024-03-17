@@ -36,6 +36,8 @@ const on_start_action = event => {
   start_batton.disabled = true;
 
   if (selected_date.getTime() < Date.now()) {
+    input_element.disabled = false;
+
     iziToast.error({
       message: 'Please choose a date in the future',
       position: 'topRight',
