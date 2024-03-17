@@ -29,6 +29,18 @@ form > label > input {
     border-radius: 4px;
     width: 360px;
     height: 40px;
+
+    padding-left: 16px;
+}
+
+form > label > input:hover {
+    border: 1px solid #000;
+}
+
+form > label > input:focus {
+    outline-style: none;
+    box-shadow: none;
+    border: 1px solid #4e75ff;
 }
 
 form > fieldset {
@@ -61,6 +73,11 @@ form > fieldset > label > input {
     height: 20px;
 }
 
+form > fieldset > label > input:hover,
+form > fieldset > label > input:focus {
+    border: 1px solid #000;
+}
+
 form > button {
     cursor: pointer;
     border: none;
@@ -73,7 +90,7 @@ form > button {
 
     font-weight: 500;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
 
