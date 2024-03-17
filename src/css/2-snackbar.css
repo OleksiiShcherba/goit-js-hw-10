@@ -1,0 +1,85 @@
+form {
+    font-family: "Montserrat", sans-serif;
+
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+
+    margin-top: 36px;
+    margin-left: 156px;
+}
+
+form > label {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 16px;
+}
+
+form > label > input {
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+}
+
+form > fieldset {
+    margin: 0;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 360px;
+    height: 78px;
+
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 12px;
+}
+
+form > fieldset > label {
+    display: flex;
+    gap: 14px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2e2f42;
+}
+
+form > fieldset > label > input {
+    width: 20px;
+    height: 20px;
+}
+
+form > button {
+    cursor: pointer;
+    border: none;
+
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 360px;
+    height: 40px;
+    background-color: #4e75ff;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+form > button:hover {
+    background-color: #6c8cff;
+}
